@@ -6,7 +6,6 @@ class WorkDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Hardcode data match screenshot
     final tasks = [
       TaskItem(
         status: 'URGENT',
@@ -131,7 +130,6 @@ class TaskCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Status badge top
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
@@ -148,22 +146,18 @@ class TaskCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12),
-            // Title
             Text(
               task.title,
               style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
             ),
             const SizedBox(height: 4),
-            // Subtitle
             Text(
               task.subtitle,
               style: TextStyle(color: Colors.grey[600], fontSize: 14),
             ),
             const SizedBox(height: 12),
-            // Bottom info row
             Row(
               children: [
-                // Time
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
@@ -176,7 +170,6 @@ class TaskCard extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                // Persons
                 Row(
                   children: [
                     Icon(Icons.person, size: 16, color: Colors.grey[600]),
