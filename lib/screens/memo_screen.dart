@@ -148,7 +148,7 @@ class MemoCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => WorkDetailScreen(boardName: memo.title),
+            builder: (_) => WorkDetailScreen(memoId: memo.id, memoName: memo.title,),
           ),
         );
       },
