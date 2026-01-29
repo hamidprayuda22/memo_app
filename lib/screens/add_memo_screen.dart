@@ -36,11 +36,11 @@ class _MemoFormScreenState extends ConsumerState<MemoFormScreen> {
               TextFormField(
                 controller: _titleController,
                 decoration: const InputDecoration(
-                  labelText: 'Memo title',
+                  labelText: 'Judul Memo',
                   border: OutlineInputBorder(),
                 ),
                 validator: (v) =>
-                    (v == null || v.isEmpty) ? 'Title required' : null,
+                    (v == null || v.isEmpty) ? 'Judul Harus di Isi' : null,
               ),
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(
@@ -74,7 +74,6 @@ class _MemoFormScreenState extends ConsumerState<MemoFormScreen> {
                   ),
                 ),
                 onTap: () {
-                  // Bisa ganti ke color picker beneran nanti
                   setState(() {
                     _selectedColor = _selectedColor == Colors.green
                         ? Colors.orange
@@ -92,7 +91,7 @@ class _MemoFormScreenState extends ConsumerState<MemoFormScreen> {
                     backgroundColor: Colors.orange,
                     foregroundColor: Colors.white,
                   ),
-                  child: const Text('Save Memo'),
+                  child: const Text('Simpan Memo'),
                 ),
               ),
             ],
